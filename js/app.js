@@ -7,7 +7,7 @@ var estudiantes = [
     {
         "codigo": 2,
         "nombre": "Floki",
-        "nota": 4.9
+        "nota": 4.8
     },
     {
         "codigo": 3,
@@ -92,26 +92,30 @@ function calcularNotaPromedio(){
 
 // Calcula la nota mayor entre las notas de todos los estudiantes:
 function calcularNotaMayor(){
-    var notaMayor = estudiantes[0].nota;
+    var indiceNotaMayor = 0;
+    var notaMayor = estudiantes[indiceNotaMayor].nota;
 
     for(var i = 1; i < estudiantes.length; ++i){
         if(estudiantes[i].nota > notaMayor){
             notaMayor = estudiantes[i].nota;
+            indiceNotaMayor = i;
         }
     }
 
-    alert("La nota mayor es: " + notaMayor);
+    alert("El estudiante " + estudiantes[indiceNotaMayor].nombre + " tiene la nota mayor: " + notaMayor);
 }
 
 // Calcula nota menor entre las notas de todos los estudiantes:
 function calcularNotaMenor(){
-    var notaMenor = estudiantes[0].nota;
+    var indiceNotaMenor = 0;
+    var notaMenor = estudiantes[indiceNotaMenor].nota;
 
     for(var i = 1; i < estudiantes.length; ++i){
         if(estudiantes[i].nota < notaMenor){
             notaMenor = estudiantes[i].nota;
+            indiceNotaMenor = i;
         }
     }
 
-    alert("La nota menor es: " + notaMenor);
+    alert("El estudiante " + estudiantes[indiceNotaMenor].nombre + " tiene la nota menor: " + notaMenor);
 }
